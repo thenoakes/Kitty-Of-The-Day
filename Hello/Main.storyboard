@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="219">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController" title="Root View" customClass="RootVC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="331" translatesAutoresizingMaskIntoConstraints="NO" distribution="fillEqually">
+                                <rect key="frame" x="36" y="114" width="342" height="572"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample app. Please click the button below to begin a countdown and then display the Kitty of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="336" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="286"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="337" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="286" width="342" height="286"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Kitty of the Day"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="332" firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="331" secondAttribute="top" constant="-50"/>
+                            <constraint id="333" firstItem="wfy-db-euE" firstAttribute="top" secondItem="331" secondAttribute="bottom" constant="50"/>
+                            <constraint id="334" firstItem="8bC-Xf-vdC" firstAttribute="leadingMargin" secondItem="331" secondAttribute="leading" constant="-16"/>
+                            <constraint id="335" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="331" secondAttribute="trailing" constant="16"/>
+                        </constraints>
+                    </view>
+                    <navigationItem id="326" key="navigationItem"/>
+                    <connections>
+                        <outlet property="rootViewInfoText" destination="336" id="name-outlet-336"/>
+                        <outlet property="rootViewButton" destination="337" id="name-outlet-337"/>
+                        <outlet property="rootViewNavbar" destination="326" id="name-outlet-326"/>
+                        <segue id="660" destination="554" kind="show" identifier="defaultRootViewSegue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="0.0"/>
+        </scene>
+        <scene sceneID="218">
+            <objects>
+                <navigationController id="219" sceneMemberID="viewController" title="Master Navigation">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="221">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="327" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="222" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="1"/>
+        </scene>
+        <scene sceneID="553">
+            <objects>
+                <viewController id="554" sceneMemberID="viewController" customClass="StackVC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="551"/>
+                        <viewControllerLayoutGuide type="bottom" id="552"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="555">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your kitty will be delivered in..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="680" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="34" y="136" width="347" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="681" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="110" y="382" width="194" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="stackViewInfoText" destination="680" id="name-outlet-680"/>
+                        <outlet property="stackViewCountdown" destination="681" id="name-outlet-681"/>
+                        <outlet property="stackViewNavbar" destination="683" id="name-outlet-683"/>
+                        <segue id="2346" destination="1378" kind="presentation" identifier="popoverSegue"/>
+                    </connections>
+                    <navigationItem title="Title" id="683" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="556" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="2"/>
+        </scene>
+        <scene sceneID="1377">
+            <objects>
+                <navigationController id="1378" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1380">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="1449" destination="1387" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1381" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="796"/>
+        </scene>
+        <scene sceneID="1386">
+            <objects>
+                <viewController id="1387" sceneMemberID="viewController" customClass="PopoverVC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1384"/>
+                        <viewControllerLayoutGuide type="bottom" id="1385"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1388">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1453" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="gingerkitten.jpg">
+                                <rect key="frame" x="93" y="304" width="240" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <navigationItem title="Kitty!" id="1448" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="1452" systemItem="cancel"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelKittyButton" destination="1452" id="name-outlet-1452"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1389" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="798"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gingerkitten.jpg" width="426" height="282"/>
+    </resources>
+</document>
